@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HoraRemedio
 {
-    public partial class Cadastrar : Form
+    public partial class FormCadastrar : Form
     {
-        public Cadastrar()
+        public FormCadastrar()
         {
             InitializeComponent();
         }
@@ -20,6 +20,14 @@ namespace HoraRemedio
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormLogin login = new FormLogin();
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
         }
     }
 }

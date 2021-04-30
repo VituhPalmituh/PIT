@@ -1,7 +1,7 @@
 ﻿
 namespace HoraRemedio
 {
-    partial class Form1
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -82,6 +82,7 @@ namespace HoraRemedio
             this.botaoConectar.TabIndex = 4;
             this.botaoConectar.Text = "Conectar";
             this.botaoConectar.UseVisualStyleBackColor = true;
+            this.botaoConectar.Click += new System.EventHandler(this.botaoConectar_Click);
             // 
             // botaoCadastrar
             // 
@@ -93,6 +94,7 @@ namespace HoraRemedio
             this.botaoCadastrar.TabIndex = 5;
             this.botaoCadastrar.Text = "Cadastrar";
             this.botaoCadastrar.UseVisualStyleBackColor = true;
+            this.botaoCadastrar.Click += new System.EventHandler(this.botaoCadastrar_Click);
             // 
             // logo
             // 
@@ -105,7 +107,7 @@ namespace HoraRemedio
             this.logo.TabStop = false;
             this.logo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Form1
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,7 +119,8 @@ namespace HoraRemedio
             this.Controls.Add(this.nomeProjeto);
             this.Controls.Add(this.logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);

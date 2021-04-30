@@ -1,7 +1,7 @@
 ﻿
 namespace HoraRemedio
 {
-    partial class Cadastrar
+    partial class FormCadastrar
     {
         /// <summary>
         /// Required designer variable.
@@ -106,8 +106,9 @@ namespace HoraRemedio
             this.button1.TabIndex = 6;
             this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Cadastrar
+            // FormCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,8 +121,9 @@ namespace HoraRemedio
             this.Controls.Add(this.logo);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Cadastrar";
-            this.Text = "Cadastrar";
+            this.Name = "FormCadastrar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

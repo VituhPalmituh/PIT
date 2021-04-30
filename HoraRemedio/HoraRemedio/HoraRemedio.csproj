@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,43 +49,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alarme.cs">
+    <Compile Include="Alarme.cs" />
+    <Compile Include="ConsoleRemedio.cs" />
+    <Compile Include="FormAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alarme.Designer.cs">
-      <DependentUpon>Alarme.cs</DependentUpon>
+    <Compile Include="FormAgenda.Designer.cs">
+      <DependentUpon>FormAgenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastrar.cs">
+    <Compile Include="FormAlarme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastrar.Designer.cs">
-      <DependentUpon>Cadastrar.cs</DependentUpon>
+    <Compile Include="FormAlarme.Designer.cs">
+      <DependentUpon>FormAlarme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormCadastrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormCadastrar.Designer.cs">
+      <DependentUpon>FormCadastrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Alarme.resx">
-      <DependentUpon>Alarme.cs</DependentUpon>
+    <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="FormAgenda.resx">
+      <DependentUpon>FormAgenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastrar.resx">
-      <DependentUpon>Cadastrar.cs</DependentUpon>
+    <EmbeddedResource Include="FormAlarme.resx">
+      <DependentUpon>FormAlarme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormCadastrar.resx">
+      <DependentUpon>FormCadastrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

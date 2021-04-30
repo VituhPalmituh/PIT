@@ -1,20 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace HoraRemedio
 {
-    public partial class Alarme : Form
+    class Alarme
     {
-        public Alarme()
+        string alarme;
+        DateTime dia;
+        DateTime hora;
+        bool ativo;
+
+        public void ativar()
         {
-            InitializeComponent();
+
+        }
+
+        public void desativar()
+        {
+
         }
     }
 }
