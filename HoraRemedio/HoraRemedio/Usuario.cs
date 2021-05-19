@@ -8,7 +8,8 @@ namespace HoraRemedio
 {
     public class Usuario
     {
+        string usuario;
         string nome;
-        string cpf;
+        string senha;
     }
 }

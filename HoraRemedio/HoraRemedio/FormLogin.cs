@@ -24,10 +24,22 @@ namespace HoraRemedio
 
         private void botaoConectar_Click(object sender, EventArgs e)
         {
-            FormMenu menu = new FormMenu();
-            this.Hide();
-            menu.ShowDialog();
-            this.Close();
+            var conexao = new BD();
+            string selectLogin = $"SELECT * FROM Clientes WHERE Usuario = '{tbUsuario.Text}' AND Senha = '{tbSenha.Text}'";
+            var resultado = conexao.ExecutarSelect(selectLogin);
+            if (resultado != null && resultado.Rows.Count > 0)
+            {
+                MessageBox.Show("Login efetuado com sucesso.");
+                FormMenu menu = new FormMenu();
+                menu.IdCliente = Convert.ToInt32(resultado.Rows[0]["IdCliente"]);
+                this.Hide();
+                menu.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou Senha incorretos.");
+            }
         }
 
         private void botaoCadastrar_Click(object sender, EventArgs e)
@@ -36,6 +48,15 @@ namespace HoraRemedio
             this.Hide();
             cadastrar.ShowDialog();
             this.Close();
+        }
+
+        private void lbSenha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
         }
     }
 }

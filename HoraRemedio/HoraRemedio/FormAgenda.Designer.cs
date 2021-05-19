@@ -34,25 +34,25 @@ namespace HoraRemedio
             this.btnVoltar = new System.Windows.Forms.Button();
             this.clbAgenda = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numDia = new System.Windows.Forms.NumericUpDown();
+            this.numMes = new System.Windows.Forms.NumericUpDown();
+            this.numAno = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numHora = new System.Windows.Forms.NumericUpDown();
+            this.numMinuto = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbDescricao = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSalvarDia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinuto)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -92,6 +92,7 @@ namespace HoraRemedio
             this.clbAgenda.Name = "clbAgenda";
             this.clbAgenda.Size = new System.Drawing.Size(374, 304);
             this.clbAgenda.TabIndex = 3;
+            this.clbAgenda.SelectedIndexChanged += new System.EventHandler(this.clbAgenda_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -103,67 +104,67 @@ namespace HoraRemedio
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // numericUpDown1
+            // numDia
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 193);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numDia.Location = new System.Drawing.Point(12, 193);
+            this.numDia.Maximum = new decimal(new int[] {
             31,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.numDia.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown1.TabIndex = 5;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numDia.Name = "numDia";
+            this.numDia.Size = new System.Drawing.Size(44, 20);
+            this.numDia.TabIndex = 5;
+            this.numDia.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // numericUpDown2
+            // numMes
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(62, 193);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.numMes.Location = new System.Drawing.Point(62, 193);
+            this.numMes.Maximum = new decimal(new int[] {
             12,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.numMes.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown2.TabIndex = 6;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.numMes.Name = "numMes";
+            this.numMes.Size = new System.Drawing.Size(44, 20);
+            this.numMes.TabIndex = 6;
+            this.numMes.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // numericUpDown3
+            // numAno
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(112, 193);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.numAno.Location = new System.Drawing.Point(112, 193);
+            this.numAno.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.numericUpDown3.Minimum = new decimal(new int[] {
+            this.numAno.Minimum = new decimal(new int[] {
             2020,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(44, 20);
-            this.numericUpDown3.TabIndex = 7;
-            this.numericUpDown3.Value = new decimal(new int[] {
+            this.numAno.Name = "numAno";
+            this.numAno.Size = new System.Drawing.Size(44, 20);
+            this.numAno.TabIndex = 7;
+            this.numAno.Value = new decimal(new int[] {
             2020,
             0,
             0,
@@ -196,45 +197,45 @@ namespace HoraRemedio
             this.label3.TabIndex = 10;
             this.label3.Text = "Ano:";
             // 
-            // numericUpDown4
+            // numHora
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(12, 236);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.numHora.Location = new System.Drawing.Point(12, 236);
+            this.numHora.Maximum = new decimal(new int[] {
             31,
             0,
             0,
             0});
-            this.numericUpDown4.Minimum = new decimal(new int[] {
+            this.numHora.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(64, 20);
-            this.numericUpDown4.TabIndex = 11;
-            this.numericUpDown4.Value = new decimal(new int[] {
+            this.numHora.Name = "numHora";
+            this.numHora.Size = new System.Drawing.Size(64, 20);
+            this.numHora.TabIndex = 11;
+            this.numHora.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // numericUpDown5
+            // numMinuto
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(82, 236);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
+            this.numMinuto.Location = new System.Drawing.Point(82, 236);
+            this.numMinuto.Maximum = new decimal(new int[] {
             31,
             0,
             0,
             0});
-            this.numericUpDown5.Minimum = new decimal(new int[] {
+            this.numMinuto.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(74, 20);
-            this.numericUpDown5.TabIndex = 12;
-            this.numericUpDown5.Value = new decimal(new int[] {
+            this.numMinuto.Name = "numMinuto";
+            this.numMinuto.Size = new System.Drawing.Size(74, 20);
+            this.numMinuto.TabIndex = 12;
+            this.numMinuto.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -258,13 +259,13 @@ namespace HoraRemedio
             this.label5.TabIndex = 14;
             this.label5.Text = "Minuto:";
             // 
-            // textBox1
+            // tbDescricao
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 308);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 26);
-            this.textBox1.TabIndex = 15;
+            this.tbDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDescricao.Location = new System.Drawing.Point(12, 308);
+            this.tbDescricao.Name = "tbDescricao";
+            this.tbDescricao.Size = new System.Drawing.Size(150, 26);
+            this.tbDescricao.TabIndex = 15;
             // 
             // label6
             // 
@@ -293,17 +294,17 @@ namespace HoraRemedio
             this.ClientSize = new System.Drawing.Size(704, 441);
             this.Controls.Add(this.btnSalvarDia);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbDescricao);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDown5);
-            this.Controls.Add(this.numericUpDown4);
+            this.Controls.Add(this.numMinuto);
+            this.Controls.Add(this.numHora);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numAno);
+            this.Controls.Add(this.numMes);
+            this.Controls.Add(this.numDia);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.clbAgenda);
             this.Controls.Add(this.btnVoltar);
@@ -313,12 +314,13 @@ namespace HoraRemedio
             this.Name = "FormAgenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAgenda";
+            this.Load += new System.EventHandler(this.FormAgenda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinuto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,17 +333,17 @@ namespace HoraRemedio
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.CheckedListBox clbAgenda;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numDia;
+        private System.Windows.Forms.NumericUpDown numMes;
+        private System.Windows.Forms.NumericUpDown numAno;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown numHora;
+        private System.Windows.Forms.NumericUpDown numMinuto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbDescricao;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSalvarDia;
     }

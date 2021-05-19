@@ -30,11 +30,13 @@ namespace HoraRemedio
         private void InitializeComponent()
         {
             this.nomeProjeto = new System.Windows.Forms.Label();
-            this.cpf = new System.Windows.Forms.Label();
-            this.textBoxCpf = new System.Windows.Forms.TextBox();
+            this.lbSenha = new System.Windows.Forms.Label();
+            this.tbSenha = new System.Windows.Forms.TextBox();
             this.botaoConectar = new System.Windows.Forms.Button();
             this.botaoCadastrar = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.lbUsuario = new System.Windows.Forms.Label();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,27 +52,28 @@ namespace HoraRemedio
             this.nomeProjeto.TabIndex = 1;
             this.nomeProjeto.Text = "Hora do Remédio";
             // 
-            // cpf
+            // lbSenha
             // 
-            this.cpf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cpf.AutoSize = true;
-            this.cpf.Font = new System.Drawing.Font("Minecraftia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpf.Location = new System.Drawing.Point(244, 170);
-            this.cpf.Name = "cpf";
-            this.cpf.Size = new System.Drawing.Size(72, 34);
-            this.cpf.TabIndex = 2;
-            this.cpf.Text = "CPF:";
+            this.lbSenha.AutoSize = true;
+            this.lbSenha.Font = new System.Drawing.Font("Minecraftia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSenha.Location = new System.Drawing.Point(210, 166);
+            this.lbSenha.Name = "lbSenha";
+            this.lbSenha.Size = new System.Drawing.Size(106, 34);
+            this.lbSenha.TabIndex = 2;
+            this.lbSenha.Text = "Senha:";
+            this.lbSenha.Click += new System.EventHandler(this.lbSenha_Click);
             // 
-            // textBoxCpf
+            // tbSenha
             // 
-            this.textBoxCpf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxCpf.Location = new System.Drawing.Point(308, 173);
-            this.textBoxCpf.Name = "textBoxCpf";
-            this.textBoxCpf.Size = new System.Drawing.Size(158, 26);
-            this.textBoxCpf.TabIndex = 3;
+            this.tbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tbSenha.Location = new System.Drawing.Point(308, 173);
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.Size = new System.Drawing.Size(158, 26);
+            this.tbSenha.TabIndex = 3;
             // 
             // botaoConectar
             // 
@@ -107,21 +110,46 @@ namespace HoraRemedio
             this.logo.TabStop = false;
             this.logo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lbUsuario
+            // 
+            this.lbUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbUsuario.AutoSize = true;
+            this.lbUsuario.Font = new System.Drawing.Font("Minecraftia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsuario.Location = new System.Drawing.Point(187, 128);
+            this.lbUsuario.Name = "lbUsuario";
+            this.lbUsuario.Size = new System.Drawing.Size(129, 34);
+            this.lbUsuario.TabIndex = 6;
+            this.lbUsuario.Text = "Usuário:";
+            // 
+            // tbUsuario
+            // 
+            this.tbUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tbUsuario.Location = new System.Drawing.Point(308, 135);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(158, 26);
+            this.tbUsuario.TabIndex = 7;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 441);
+            this.Controls.Add(this.tbUsuario);
+            this.Controls.Add(this.lbUsuario);
             this.Controls.Add(this.botaoCadastrar);
             this.Controls.Add(this.botaoConectar);
-            this.Controls.Add(this.textBoxCpf);
-            this.Controls.Add(this.cpf);
+            this.Controls.Add(this.tbSenha);
+            this.Controls.Add(this.lbSenha);
             this.Controls.Add(this.nomeProjeto);
             this.Controls.Add(this.logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,10 +160,12 @@ namespace HoraRemedio
 
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label nomeProjeto;
-        private System.Windows.Forms.Label cpf;
-        private System.Windows.Forms.TextBox textBoxCpf;
+        private System.Windows.Forms.Label lbSenha;
+        private System.Windows.Forms.TextBox tbSenha;
         private System.Windows.Forms.Button botaoConectar;
         private System.Windows.Forms.Button botaoCadastrar;
+        private System.Windows.Forms.Label lbUsuario;
+        private System.Windows.Forms.TextBox tbUsuario;
     }
 }
 

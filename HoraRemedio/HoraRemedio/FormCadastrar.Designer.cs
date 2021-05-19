@@ -32,10 +32,12 @@ namespace HoraRemedio
             this.label1 = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.nome = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cpf = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbNome = new System.Windows.Forms.TextBox();
+            this.lbSenha = new System.Windows.Forms.Label();
+            this.tbSenha = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
+            this.lbUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,42 +67,42 @@ namespace HoraRemedio
             // 
             this.nome.AutoSize = true;
             this.nome.Font = new System.Drawing.Font("Minecraftia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nome.Location = new System.Drawing.Point(173, 131);
+            this.nome.Location = new System.Drawing.Point(181, 174);
             this.nome.Name = "nome";
             this.nome.Size = new System.Drawing.Size(89, 34);
             this.nome.TabIndex = 2;
             this.nome.Text = "Nome:";
             // 
-            // textBox1
+            // tbNome
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(268, 139);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(295, 26);
-            this.textBox1.TabIndex = 3;
+            this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNome.Location = new System.Drawing.Point(276, 182);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(295, 26);
+            this.tbNome.TabIndex = 3;
             // 
-            // cpf
+            // lbSenha
             // 
-            this.cpf.AutoSize = true;
-            this.cpf.Font = new System.Drawing.Font("Minecraftia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpf.Location = new System.Drawing.Point(193, 165);
-            this.cpf.Name = "cpf";
-            this.cpf.Size = new System.Drawing.Size(69, 34);
-            this.cpf.TabIndex = 4;
-            this.cpf.Text = "Cpf:";
+            this.lbSenha.AutoSize = true;
+            this.lbSenha.Font = new System.Drawing.Font("Minecraftia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSenha.Location = new System.Drawing.Point(164, 208);
+            this.lbSenha.Name = "lbSenha";
+            this.lbSenha.Size = new System.Drawing.Size(106, 34);
+            this.lbSenha.TabIndex = 4;
+            this.lbSenha.Text = "Senha:";
             // 
-            // textBox2
+            // tbSenha
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(268, 173);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(295, 26);
-            this.textBox2.TabIndex = 5;
+            this.tbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSenha.Location = new System.Drawing.Point(276, 216);
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.Size = new System.Drawing.Size(295, 26);
+            this.tbSenha.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button1.Location = new System.Drawing.Point(310, 205);
+            this.button1.Location = new System.Drawing.Point(318, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(208, 31);
             this.button1.TabIndex = 6;
@@ -108,15 +110,35 @@ namespace HoraRemedio
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // tbUsuario
+            // 
+            this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsuario.Location = new System.Drawing.Point(276, 150);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(295, 26);
+            this.tbUsuario.TabIndex = 8;
+            // 
+            // lbUsuario
+            // 
+            this.lbUsuario.AutoSize = true;
+            this.lbUsuario.Font = new System.Drawing.Font("Minecraftia", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsuario.Location = new System.Drawing.Point(141, 143);
+            this.lbUsuario.Name = "lbUsuario";
+            this.lbUsuario.Size = new System.Drawing.Size(129, 34);
+            this.lbUsuario.TabIndex = 7;
+            this.lbUsuario.Text = "Usuário:";
+            // 
             // FormCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 441);
+            this.Controls.Add(this.tbUsuario);
+            this.Controls.Add(this.lbUsuario);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.cpf);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbSenha);
+            this.Controls.Add(this.lbSenha);
+            this.Controls.Add(this.tbNome);
             this.Controls.Add(this.nome);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.label1);
@@ -135,9 +157,11 @@ namespace HoraRemedio
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label nome;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label cpf;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbNome;
+        private System.Windows.Forms.Label lbSenha;
+        private System.Windows.Forms.TextBox tbSenha;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbUsuario;
+        private System.Windows.Forms.Label lbUsuario;
     }
 }
